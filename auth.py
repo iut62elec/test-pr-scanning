@@ -21,3 +21,7 @@ def run_report(user_input):
 # Insecure: eval on user input
 def calculate(expr):
     return eval(expr)
+
+# Added insecure deserialization
+import pickle
+def load_session(data): return pickle.loads(data)
